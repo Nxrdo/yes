@@ -2487,7 +2487,7 @@ D:FireEvent("PompousTheCloud",G["Head"]["NametagTemplate"],"Parent",game.Players
 end 
 end;
 
-if string.sub(msg,1,8) == "pikachu " then 
+if string.sub(msg,1,8) == "pikachu " then
 for f,g in pairs(GetPlayer(string.sub(msg,9)))do 
 local C=game:GetService('Players').LocalPlayer.Name
 local R,M=894968335,894968339
