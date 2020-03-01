@@ -2487,6 +2487,28 @@ D:FireEvent("PompousTheCloud",G["Head"]["NametagTemplate"],"Parent",game.Players
 end 
 end;
 
+if string.sub(msg,1,8) == "pikachu " or string.sub(cmdbar.Text,1,9) == prefix.."pikachu " then 
+for f,g in pairs(GetPlayer(string.sub(msg,8)))do 
+local C=game:GetService('Players').LocalPlayer.Name
+local R,M=894968335,894968339
+local D={}
+local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+function D:FireEvent(H,I,J,K)
+G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})
+end;
+F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G
+game.ReplicatedStorage.AvatarEditor.HatHandle:FireServer("323418594")wait(1)
+D:FireEvent("PompousTheCloud",G["323418594"]["Handle"]["Mesh"],"TextureId","rbxassetid://"..M)
+D:FireEvent("PompousTheCloud",G["323418594"]["Handle"]["Mesh"],"MeshId","rbxassetid://"..R)
+D:FireEvent("PompousTheCloud",G["323418594"]["Handle"]["Mesh"],"Scale",Vector3.new(0.5, 0.5, 0.5))
+D:FireEvent("PompousTheCloud",G["323418594"]["Handle"]["Mesh"],"Offset",Vector3.new(0, 0, .2))
+D:FireEvent("PompousTheCloud",G["323418594"],"Name","HatHandle")
+D:FireEvent("PompousTheCloud",G["HatHandle"],"Parent",game.Players[g.Name].Character)
+G["PompousTheCloud"].Parent = F["Backpack"]
+end 
+end;
+
 if string.sub(cmdbar.Text,1,6) == "music "then 
 local C=game:GetService('Players').LocalPlayer.Name;
 local D={}
