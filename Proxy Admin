@@ -182,8 +182,8 @@ if p then
 [49]text<text> --// Changes VIP tag text
 [50]katana --// Gengi's Katana
 [51]wall --// A big ass wall
-[52]neon --// Neons your character
-[53]rainbow --// Rainbow character
+[52]unanchor --// Unanchors your character
+[53]anchor --// Anchors your character
 ]]
 	end
 
@@ -499,17 +499,25 @@ end
     if string.sub(cmdbar.Text,1,3) == "tan" or string.sub(cmdbar.Text,1,4) == prefix.."tan" then
 		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Nougat"))
 	end
-	
-	if string.sub(cmdbar.Text,1,7) == "rainbow" or string.sub(cmdbar.Text,1,8) == prefix.."rainbow" then
-while wait() do
-game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Magenta"))
-wait(0.5)
-game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Really blue"))
-wait(0.5)
-game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Lime green"))
-wait(0.5)
-game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Deep orange"))
-	end
+
+if string.sub(cmdbar.Text,1,6) == "anchor" or string.sub(cmdbar.Text,1,7) == prefix.."unanchor" then
+    if game:GetService("Players").LocalPlayer.Character then
+        for _, part in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+            pcall(function()
+                part.Anchored = true
+            end)
+        end
+    end
+end
+if string.sub(cmdbar.Text,1,8) == "unanchor" or string.sub(cmdbar.Text,1,9) == prefix.."unanchor" then
+    if game:GetService("Players").LocalPlayer.Character then
+        for _, part in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+            pcall(function()
+                part.Anchored = false
+            end)
+        end
+    end
+end
 
 	if string.sub(cmdbar.Text,1,2) == "ff" or string.sub(cmdbar.Text,1,3) == prefix.."ff" then
 game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud") 
@@ -2610,38 +2618,6 @@ E.players.LocalPlayer.Backpack:WaitForChild("SuperFlyGoldBoombox"):Destroy()
 game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
 end 
 end;
-
-if string.sub(cmdbar.Text,1,8) == "proxybox" then
-local ME = game:GetService("Players").LocalPlayer
-function FireEvent(ItemName, Object, Property, Value)
-ME.Character:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
-end
-game.Workspace.GiveTool:FireServer(2187476, "PompousTheCloud")
-ME["Backpack"]:WaitForChild("PompousTheCloud").Parent = ME.Character
-ME["Backpack"]:WaitForChild("SuperFlyGoldBoombox").Parent = ME.Character
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"CanBeDropped",true)
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"TextureId","rbxassetid://1587542316")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["Mesh"],"MeshId","rbxassetid://212302951")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["Mesh"],"TextureId","rbxassetid://1587542316")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["Mesh"],"Scale",Vector3.new(4, 4, 4))
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"GripPos",Vector3.new(-1.603, -0.214, 2.437))
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"GripUp",Vector3.new(-0.45, 0.893, -0.025))
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"GripRight",Vector3.new(-0.893, -0.449, 0.025))
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"EmitterSize","99999")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"MaxDistance","99999")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"Volume","10")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"PlaybackLoudness","99999")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"],"ToolTip","Proxy Admin")
-FireEvent("PompousTheCloud",ME.Character["PompousTheCloud"]["Handle"],"Transparency","1")
-while wait() do 
-print("loud")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"EmitterSize","99999")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"MaxDistance","99999")
-wait(0.01)
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"Volume","10")
-FireEvent("PompousTheCloud",ME.Character["SuperFlyGoldBoombox"]["Handle"]["BoomboxSound"],"PlaybackLoudness","99999")
-end
-end
 end
 end)
 exec:TweenPosition(UDim2.new(0.327641428, 0, 1, 0), "In", "Quint", 1)
