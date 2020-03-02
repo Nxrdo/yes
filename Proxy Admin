@@ -181,7 +181,9 @@ if p then
 [48]vip<plr> --// Gives a player VIP tag
 [49]text<text> --// Changes VIP tag text
 [50]katana --// Gengi's Katana
-[51]Wall --// A big ass wall
+[51]wall --// A big ass wall
+[52]neon --// Neons your character
+[53]rainbow --// Rainbow character
 ]]
 	end
 
@@ -499,14 +501,14 @@ end
 	end
 	
 	if string.sub(cmdbar.Text,1,7) == "rainbow" or string.sub(cmdbar.Text,1,8) == prefix.."rainbow" then
-		while wait() do
-		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Magenta"))
-		wait(0.5)
-		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Really blue"))
-		wait(0.5)
-		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Lime green"))
-		wait(0.5)
-		game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Deep orange"))
+while wait() do
+game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Magenta"))
+wait(0.5)
+game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Really blue"))
+wait(0.5)
+game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Lime green"))
+wait(0.5)
+game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Deep orange"))
 	end
 
 	if string.sub(cmdbar.Text,1,2) == "ff" or string.sub(cmdbar.Text,1,3) == prefix.."ff" then
