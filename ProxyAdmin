@@ -2505,7 +2505,7 @@ while wait() do
 end
 	end
 
-	if string.sub(cmdbar.Text,1,4) == "otag" or if string.sub(cmdbar.Text,1,5) == prefix.."otag" then
+	if string.sub(cmdbar.Text,1,4) == "otag" or string.sub(cmdbar.Text,1,5) == prefix.."otag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
 local Name = "NAME"-- NAME THE TOOL IF YOU WANT
 local CE = {} -- DON'T EDIT
