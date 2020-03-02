@@ -187,7 +187,7 @@ if p then
 ]]
 	end
 
-    if string.sub(cmdbar.Text,1,5) == "ak" or string.sub(cmdbar.Text,1,6) == prefix.."proxy" then
+    if string.sub(cmdbar.Text,1,5) == "ak" or string.sub(cmdbar.Text,1,3) == prefix.."ak" then
 game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
 local UserName  = game:GetService('Players').LocalPlayer.Name
 local Autoride = true
@@ -2321,7 +2321,7 @@ CE:FireEvent("PompousTheCloud",MainUserW["Head"],"Transparency","1")
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["face"]:Remove())
 end
 
-if string.sub(cmdbar.Text,1,2)== "lb" or string.sub(cmdbarText,1,3) == prefix.."lb" then 
+if string.sub(cmdbar.Text,1,2)== "lb" or string.sub(cmdbar.Text,1,3) == prefix.."lb" then 
 	local UserName  = game:GetService('Players').LocalPlayer.Name
 	local mesh = 1107038050
 	local texture = 4638242624
