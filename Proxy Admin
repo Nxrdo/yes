@@ -180,7 +180,8 @@ if p then
 [47]ytag --// Yellow VIP tag
 [48]vip<plr> --// Gives a player VIP tag
 [49]text<text> --// Changes VIP tag text
-[50]katana
+[50]katana --// Gengi's Katana
+[51]Wall --// A big ass wall
 ]]
 	end
 
