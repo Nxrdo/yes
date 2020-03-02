@@ -2321,7 +2321,7 @@ CE:FireEvent("PompousTheCloud",MainUserW["Head"],"Transparency","1")
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["face"]:Remove())
 end
 
-if string.sub(cmdbar.Text,1,2)== "lb" or string.sub(cmdbar.Text,1,3) == prefix.."lb" then 
+if string.sub(cmdbar.Text,1,2) == "lb" or string.sub(cmdbar.Text,1,3) == prefix.."lb" then 
 	local UserName  = game:GetService('Players').LocalPlayer.Name
 	local mesh = 1107038050
 	local texture = 4638242624
@@ -2436,7 +2436,7 @@ CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Size",Vector3.new(30.5, 17.75
 CE:FireEvent("PompousTheCloud",MainUserW["Torso"],"Parent",Workspace)
 end
 
-	if string.sub(cmdbar.Text,1,4) == "gtag" then
+	if string.sub(cmdbar.Text,1,4) == "gtag" or string.sub(cmdbar.Text,1,5) == prefix.."gtag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
 local Name = "NAME"-- NAME THE TOOL IF YOU WANT
 local CE = {} -- DON'T EDIT
@@ -2459,7 +2459,7 @@ while wait() do
 end
 	end
 
-	if string.sub(cmdbar.Text,1,4) == "rtag" then
+	if string.sub(cmdbar.Text,1,4) == "rtag" or string.sub(cmdbar.Text,1,5) == prefix.."rtag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
 local Name = "NAME"-- NAME THE TOOL IF YOU WANT
 local CE = {} -- DON'T EDIT
@@ -2482,7 +2482,7 @@ while wait() do
 end
 	end
 
-	if string.sub(cmdbar.Text,1,4) == "btag" or string.sub(cmdbat.Text,1,5) == prefix.."btag" then
+	if string.sub(cmdbar.Text,1,4) == "btag" or string.sub(cmdbar.Text,1,5) == prefix.."btag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
 local Name = "NAME"-- NAME THE TOOL IF YOU WANT
 local CE = {} -- DON'T EDIT
@@ -2505,7 +2505,7 @@ while wait() do
 end
 	end
 
-	if string.sub(cmdbar.Text,1,4) == "otag" then
+	if string.sub(cmdbar.Text,1,4) == "otag" or if string.sub(cmdbar.Text,1,5) == prefix.."otag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
 local Name = "NAME"-- NAME THE TOOL IF YOU WANT
 local CE = {} -- DON'T EDIT
@@ -2528,7 +2528,7 @@ while wait() do
 end
 	end
 
-	if string.sub(cmdbar.Text,1,4) == "ytag" then
+	if string.sub(cmdbar.Text,1,4) == "ytag" or string.sub(cmdbar.Text,1,5) == prefix.."ytag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
 local Name = "NAME"-- NAME THE TOOL IF YOU WANT
 local CE = {} -- DON'T EDIT
