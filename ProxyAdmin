@@ -184,6 +184,8 @@ if p then
 [51]wall --// A big ass wall
 [52]unanchor --// Unanchors your character
 [53]anchor --// Anchors your character
+[54]tff --// Makes your tool ForceField
+[55]untff --// Puts your tool back to normal
 ]]
 	end
 
@@ -1083,6 +1085,55 @@ MainUserP:GetMouse().Button1Down:Connect(function()
 	end
 end)
 	end
+	
+	
+if string.sub(cmdbar.Text,1,3) == "tff" or string.sub(cmdbar.Text,1,4) == prefix.."tff"  then
+	local C = game:GetService('Players').LocalPlayer.Name;
+	local D = {}
+	local E = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+	local F, G = E.players.LocalPlayer, E.workspace:FindFirstChild(C)
+	function D:FireEvent(H, I, J, K)
+		G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty", {
+			["Value"] = K,
+			["Property"] = J,
+			["Object"] = I
+		})
+	end;
+	game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
+	for f, g in pairs(lplayer.Character:GetChildren()) do
+		if g:IsA("Tool") then
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "Material", Enum.Material.ForceField)
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle, "Material", Enum.Material.Plastic)
+		end
+	end
+end;
+if string.sub(cmdbar.Text,1,5) == "tunff" or string.sub(cmdbar.Text,1,6) == prefix.."tunff" then
+	local C = game:GetService('Players').LocalPlayer.Name;
+	local D = {}
+	local E = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+	local F, G = E.players.LocalPlayer, E.workspace:FindFirstChild(C)
+	function D:FireEvent(H, I, J, K)
+		G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty", {
+			["Value"] = K,
+			["Property"] = J,
+			["Object"] = I
+		})
+	end;
+	game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
+	for f, g in pairs(lplayer.Character:GetChildren()) do
+		if g:IsA("Tool") then
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "Material", Enum.Material.Plastic)
+		end
+	end
+end;
 
 	if string.sub(cmdbar.Text,1,5) == "sonic" or string.sub(cmdbar.Text,1,6) == prefix.."sonic" then 
 game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
