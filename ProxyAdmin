@@ -2585,6 +2585,97 @@ while wait() do
     CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextStrokeColor3",Color3.new(0,0,255))
 end
 	end
+	
+	
+if string.sub(cmdbar.Text,1,7) == "rainbow" then
+	_G.rainbow = true;
+	while _G.rainbow do
+		for f = 0, 1, 0.1 do
+			game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new(Color3.fromHSV(f, 1, 1)))
+			wait(.1)
+		end
+	end
+end;
+
+if string.sub(cmdbar.Text,1,9) == "unrainbow" then
+	_G.rainbow = false;
+	wait(1)
+	game:GetService("ReplicatedStorage").AvatarEditor.BodyColorEvent:FireServer(BrickColor.new("Nougat"))
+end;
+if string.sub(cmdbar.Text,1,4) == "camo" then
+	local C = game:GetService('Players').LocalPlayer.Name;
+	local D = {}
+	local E = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+	local F, G = E.players.LocalPlayer, E.workspace:FindFirstChild(C)
+	function D:FireEvent(H, I, J, K)
+		G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty", {
+			["Value"] = K,
+			["Property"] = J,
+			["Object"] = I
+		})
+	end;
+	game.Workspace.GiveTool:FireServer(a, "PompousTheCloud")
+	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
+	for f, g in pairs(lplayer.Character:GetChildren()) do
+		if g:IsA("Tool") then
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle.Mesh, "TextureId", "rbxassetid://113616822")
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle.Mesh, "TextureId", "rbxassetid://113616822")
+		end
+	end
+end;
+
+if string.sub(cmdbar.Text,1,5) == "bcamo" then
+	local C = game:GetService('Players').LocalPlayer.Name;
+	local D = {}
+	local E = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+	local F, G = E.players.LocalPlayer, E.workspace:FindFirstChild(C)
+	function D:FireEvent(H, I, J, K)
+		G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty", {
+			["Value"] = K,
+			["Property"] = J,
+			["Object"] = I
+		})
+	end;
+	game.Workspace.GiveTool:FireServer(a, "PompousTheCloud")
+	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
+	for f, g in pairs(lplayer.Character:GetChildren()) do
+		if g:IsA("Tool") then
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle.Mesh, "TextureId", "rbxassetid://254324304")
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle.Mesh, "TextureId", "rbxassetid://254324304")
+		end
+	end
+end;
+
+if string.sub(l.Text,1,5) == "wcamo" then
+	local C = game:GetService('Players').LocalPlayer.Name;
+	local D = {}
+	local E = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+	local F, G = E.players.LocalPlayer, E.workspace:FindFirstChild(C)
+	function D:FireEvent(H, I, J, K)
+		G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty", {
+			["Value"] = K,
+			["Property"] = J,
+			["Object"] = I
+		})
+	end;
+	game.Workspace.GiveTool:FireServer(a, "PompousTheCloud")
+	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
+	for f, g in pairs(lplayer.Character:GetChildren()) do
+		if g:IsA("Tool") then
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle.Mesh, "TextureId", "rbxassetid://64466157")
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle.Mesh, "TextureId", "rbxassetid://64466157")
+		end
+	end
+end;
 
 	if string.sub(cmdbar.Text,1,4) == "otag" or string.sub(cmdbar.Text,1,5) == prefix.."otag" then
 local UserName  = game:GetService("Players").LocalPlayer.Name -- DON'T EDIT
