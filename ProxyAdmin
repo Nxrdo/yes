@@ -186,7 +186,7 @@ if p then
 [52]unanchor --// Unanchors your character
 [53]anchor --// Anchors your character
 [54]tff --// Makes your tool ForceField
-[55]untff --// Puts your tool back to normal
+[55]tunff --// Puts your tool back to normal
 [56]jail<plr> --// Puts the desired user in a jail
 [57]rainbow --// Makes your character rainbow
 [58]unrainbow --// Puts your character back to normal
@@ -2939,6 +2939,10 @@ W1:TweenPosition(UDim2.new(0, 0, 1, 0), "In", "Quint", 1)
 wait(1)
 exec:TweenPosition(UDim2.new(0.327641428, 0, 0.351617396, 0), "Out", "Quart", 1)
 W1:Destroy()
+elseif game.Players.LocalPlayer.Name == "Daman20055" and Enterkey.Text == "Daman20055" then
+W1:TweenPosition(UDim2.new(0, 0, 1, 0), "In", "Quint", 1)
+wait(1)
+exec:TweenPosition(UDim2.new(0.327641428, 0, 0.351617396, 0), "Out", "Quart", 1)
 end
 end
 end)
