@@ -2270,7 +2270,7 @@ end
 end 
 end;
 
-if string.sub(cmdbar.Text,1,5) == "kill "then
+if string.sub(cmdbar.Text,1,5) == "kill " then
 game.workspace.GiveTool:FireServer("7602040", "PompousTheCloud") 
 for f,g in pairs(GetPlayer(string.sub(cmdbar.Text,6)))do 
 local C=game:GetService('Players').LocalPlayer.Name;
@@ -2295,7 +2295,34 @@ for i,v in pairs(GetPlayer(string.sub(cmdbar.Text,6))) do
 lplayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")[v.Name].Character.HumanoidRootPart.CFrame
 end
 end
-    if string.sub(cmdbar.Text,1,5) == "dtool" then--add cmd inside " "
+
+if string.sub(cmdbar.Text,1,5) == "jail " then
+    for f,g in pairs(GetPlayer(string.sub(cmdbar.Text,6)))do
+    game:GetService("ReplicatedStorage"):FindFirstChild("AvatarEditor"):FindFirstChild("HatHandle"):FireServer(33171947)
+    wait(1)
+    local C=game:GetService('Players').LocalPlayer.Name;
+    local M,T=478075546,33463815;
+    local D={}
+    local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+    local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+    function D:FireEvent(H,I,J,K)
+    G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})
+    end;
+    F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G;
+    game.Workspace.GiveTool:FireServer(1554987,"PompousTheCloud")
+    D:FireEvent("PompousTheCloud",G["33171947"]["Handle"],"Transparency",0.5)
+    D:FireEvent("PompousTheCloud",G["33171947"]["Handle"]["Mesh"],"Scale",Vector3.new(1,1,1))
+    D:FireEvent("PompousTheCloud",G["33171947"]["Handle"]["Mesh"],"MeshId","rbxassetid://"..M)
+    D:FireEvent("PompousTheCloud",G["33171947"]["Handle"]["Mesh"],"TextureId","rbxassetid://"..T)
+    D:FireEvent("PompousTheCloud",G["33171947"]["Handle"],"Anchored",true)
+    D:FireEvent("PompousTheCloud",G["33171947"],"Parent",game.Players[g.Name].Character)
+    game.Players.LocalPlayer.Character.PompousTheCloud:Remove()
+    game.Players.LocalPlayer.Character[33171947]:Remove()
+    game.Workspace.GiveTool:FireServer(1554987,"PompousTheCloud")
+    end
+end;
+
+    if string.sub(cmdbar.Text,1,5) == "dtool" then
     local ToolName = ""
 local Counter = 0
 
@@ -2310,12 +2337,13 @@ if Counter >= 1 then
 local Tool = game.Players.LocalPlayer.Character[ToolName]
 Tool.Parent = game.Workspace
 warn("Dropped!")
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
 else
 warn("No tool was found.")
 end
     end
 
-if string.sub(cmdbar.Text,1,7) == "unlkill"then 
+if string.sub(cmdbar.Text,1,7) == "unlkill" then 
     _G.lkill=false;
 end
 
