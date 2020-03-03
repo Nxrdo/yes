@@ -187,7 +187,12 @@ if p then
 [53]anchor --// Anchors your character
 [54]tff --// Makes your tool ForceField
 [55]untff --// Puts your tool back to normal
-[56]jail<plr> --//Puts the desired user in a jail
+[56]jail<plr> --// Puts the desired user in a jail
+[57]rainbow --// Makes your character rainbow
+[58]unrainbow --// Puts your character back to normal
+[59]camo --// Makes your tool camo
+[60]wcamo --// Makes your tool white camo
+[61]bcamo --// Makes your tool blue camo
 ]]
 	end
 
