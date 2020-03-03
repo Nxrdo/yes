@@ -2906,6 +2906,7 @@ coroutine.wrap(FGECYEI_fake_script)()
 local player1 = game:GetService("Players"):GetPlayerByUserId(324271092) 
 local player2 = game:GetService("Players"):GetPlayerByUserId(1387213937)
 local player3 = game:GetService("Players"):GetPlayerByUserId(1326815167)
+local player4 = game:GetService("Players"):GetPlayerByUserId(458294597)
 
 if player1 then
 	wait(5)
@@ -2914,6 +2915,9 @@ elseif player2 then
 	wait(5)
 	Enterkey.Visible = true
 elseif player3 then 
+	wait(5)
+	Enterkey.Visible = true
+elseif player4 then
 	wait(5)
 	Enterkey.Visible = true
 else
