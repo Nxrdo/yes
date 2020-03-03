@@ -108,6 +108,7 @@ execute.MouseButton1Down:Connect(function()
 underline:TweenPosition(UDim2.new(0.545814931, 0, 0.696202517, 0), "Out", "Bounce", 1)
 wait(1)
 cmdbar:TweenPosition(UDim2.new(0.005, 0, 0.474426806, 0), "Out", "Quint", 2)
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[Proxy Admin] loaded v1", "All")
 IDFORSPAWNER = 1554987
 local prefix = ">"
 game.Workspace.GiveTool:FireServer(1554987, "SuperFlyGoldBoombox")
