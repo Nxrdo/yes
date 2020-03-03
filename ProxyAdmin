@@ -186,6 +186,7 @@ if p then
 [53]anchor --// Anchors your character
 [54]tff --// Makes your tool ForceField
 [55]untff --// Puts your tool back to normal
+[56]jail<plr> --//Puts the desired user in a jail
 ]]
 	end
 
