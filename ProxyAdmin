@@ -15,8 +15,8 @@ cmdbar.Parent = ScreenGui
 cmdbar.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 cmdbar.BorderColor3 = Color3.fromRGB(255, 255, 255)
 cmdbar.BorderSizePixel = 3
-cmdbar.Position = UDim2.new(-1, 0, 0.474426806, 0)
-cmdbar.Size = UDim2.new(0.200000003, 0, 0.0500000007, 0)
+cmdbar.Position = UDim2.new(-1, 0, 0.304426806, 0)
+cmdbar.Size = UDim2.new(0.200000003, 0, 0.0400000007, 0)
 cmdbar.Font = Enum.Font.SourceSansBold
 cmdbar.Text = "Type Commands Here"
 cmdbar.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -107,7 +107,7 @@ underline.Size = UDim2.new(0.349999994, 0, 0.0154999997, 0)
 execute.MouseButton1Down:Connect(function()
 underline:TweenPosition(UDim2.new(0.545814931, 0, 0.696202517, 0), "Out", "Bounce", 1)
 wait(1)
-cmdbar:TweenPosition(UDim2.new(0.005, 0, 0.474426806, 0), "Out", "Quint", 2)
+cmdbar:TweenPosition(UDim2.new(0.005, 0, 0.304426806, 0), "Out", "Quint", 2)
 game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("[Proxy Admin] loaded v1", "All")
 IDFORSPAWNER = 1554987
 local prefix = ">"
@@ -199,13 +199,19 @@ if p then
 [65]gff --// Green Forcefield
 [66]off --// Orange Forcefield
 [67]wff --// White Forcefield
-[68]ptff --// Purple Tool Forcefield
-[69]rtff --// Red Tool Forcefield
-[70]gtff --// Green Tool Forcefield
-[71]otff --// Orange Tool Forcefield
-[72]wtff --// White Tool Forcefield
-[73]baseplate --// Spawns a baseplate
-[74]cube --// Spawns our sexy cube
+[68]bff --// Blue Forcefield
+[69]ptff --// Purple Tool Forcefield
+[70]rtff --// Red Tool Forcefield
+[71]gtff --// Green Tool Forcefield
+[72]otff --// Orange Tool Forcefield
+[73]wtff --// White Tool Forcefield
+[74]btff --// Blue Tool Forcefield
+[75]baseplate --// Spawns a baseplate
+[76]cube --// Spawns our sexy cube
+[77]font antique --// Changes VIP tag font to Antique
+[78]font scifi --// Changes VIP tag font to SciFi
+[79]font ssbold --// Changes VIP tag font to Source Sans Bold
+[80]font gblack --// Changes VIP tag font to Gotham Black
 ]]
 	end
 
@@ -462,12 +468,103 @@ end
 game.Workspace.GiveTool:FireServer(2187476, "PompousTheCloud")
 MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
 
-CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","Antique")
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Text","Nardo#0401")
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextColor3",Color3.new(0,0,0))
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"TextSize",100)
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"],"Size",UDim2.new(15, 0, 5, 0))
 CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Position",UDim2.new(0, -100, 0, -30))
+end
+
+	if string.sub(cmdbar.Text,1,12) == "font antique" or string.sub(cmdbar.Text,1,13) == prefix.."font antique" then
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","Antique")
+end
+
+	if string.sub(cmdbar.Text,1,10) == "font scifi" or string.sub(cmdbar.Text,1,11) == prefix.."font scifi" then
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","SciFi")
+end
+
+	if string.sub(cmdbar.Text,1,11) == "font ssbold" or string.sub(cmdbar.Text,1,12) == prefix.."font ssbold" then
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","SourceSansBold")
+end
+
+	if string.sub(cmdbar.Text,1,11) == "font gblack" or string.sub(cmdbar.Text,1,12) == prefix.."font gblack" then
+local UserName  = game:GetService('Players').LocalPlayer.Name
+local mesh = 465482937
+local texture = 465483155
+local CE = {}
+local Variables = {
+    workspace = game:GetService("Workspace"),
+    players = game:GetService("Players")
+}
+
+local MainUserP, MainUserW = Variables.players.LocalPlayer, Variables.workspace:FindFirstChild(UserName)
+
+function CE:FireEvent(ItemName, Object, Property, Value)
+    MainUserW:FindFirstChild(ItemName)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=Value,["Property"]=Property,["Object"]=Object})
+end
+
+
+game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+MainUserP["Backpack"]:WaitForChild("PompousTheCloud").Parent = MainUserW
+
+CE:FireEvent("PompousTheCloud",MainUserW["Head"]["NametagTemplate"]["TagText"],"Font","GothamBlack")
 end
 
 	if string.sub(cmdbar.Text,1,5) == "black" or string.sub(cmdbar.Text,1,6) == prefix.."black" then
@@ -578,6 +675,24 @@ for L,n in pairs(G:GetDescendants())do
 if n:IsA("BasePart")then 
 D:FireEvent("PompousTheCloud",n,"Material",Enum.Material.ForceField)
 D:FireEvent("PompousTheCloud",n,"BrickColor",BrickColor.new(255,0,0))
+end 
+end 
+end;
+
+	if string.sub(cmdbar.Text,1,3) == "bff" or string.sub(cmdbar.Text,1,4) == prefix.."bff" then 
+game.workspace.GiveTool:FireServer("1554987","PompousTheCloud")
+local C=game:GetService('Players').LocalPlayer.Name;
+local D={}
+local E={workspace=game:GetService("Workspace"),players=game:GetService("Players")}
+local F,G=E.players.LocalPlayer,E.workspace:FindFirstChild(C)
+function D:FireEvent(H,I,J,K)
+G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty",{["Value"]=K,["Property"]=J,["Object"]=I})
+end;
+game.Workspace.GiveTool:FireServer(a,"PompousTheCloud")F["Backpack"]:WaitForChild("PompousTheCloud").Parent=G;
+for L,n in pairs(G:GetDescendants())do 
+if n:IsA("BasePart")then 
+D:FireEvent("PompousTheCloud",n,"Material",Enum.Material.ForceField)
+D:FireEvent("PompousTheCloud",n,"BrickColor",BrickColor.new(0,0,255))
 end 
 end 
 end;
@@ -1241,7 +1356,7 @@ if string.sub(cmdbar.Text,1,4) == "ptff" or string.sub(cmdbar.Text,1,5) == prefi
 	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
 	for f, g in pairs(lplayer.Character:GetChildren()) do
 		if g:IsA("Tool") then
-			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "BrickColor", BrickColor.New(50,0,255))
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "BrickColor", BrickColor.New(20,0,255))
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "Material", Enum.Material.ForceField)
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle, "Material", Enum.Material.Plastic)
 		end
@@ -1293,7 +1408,7 @@ if string.sub(cmdbar.Text,1,4) == "otff" or string.sub(cmdbar.Text,1,5) == prefi
 	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
 	for f, g in pairs(lplayer.Character:GetChildren()) do
 		if g:IsA("Tool") then
-			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "BrickColor", BrickColor.New("Deep Orange"))
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "BrickColor", BrickColor.New(255,125,0))
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "Material", Enum.Material.ForceField)
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle, "Material", Enum.Material.Plastic)
 		end
@@ -1346,6 +1461,32 @@ if string.sub(cmdbar.Text,1,4) == "wtff" or string.sub(cmdbar.Text,1,5) == prefi
 	for f, g in pairs(lplayer.Character:GetChildren()) do
 		if g:IsA("Tool") then
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "BrickColor", BrickColor.New(255,255,255))
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "Material", Enum.Material.ForceField)
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle, "Material", Enum.Material.Plastic)
+		end
+	end
+end;
+
+if string.sub(cmdbar.Text,1,4) == "btff" or string.sub(cmdbar.Text,1,5) == prefix.."btff"  then
+	local C = game:GetService('Players').LocalPlayer.Name;
+	local D = {}
+	local E = {
+		workspace = game:GetService("Workspace"),
+		players = game:GetService("Players")
+	}
+	local F, G = E.players.LocalPlayer, E.workspace:FindFirstChild(C)
+	function D:FireEvent(H, I, J, K)
+		G:FindFirstChild(H)["ServerControl"]:InvokeServer("SetProperty", {
+			["Value"] = K,
+			["Property"] = J,
+			["Object"] = I
+		})
+	end;
+	game.Workspace.GiveTool:FireServer(1554987, "PompousTheCloud")
+	F["Backpack"]:WaitForChild("PompousTheCloud").Parent = G;
+	for f, g in pairs(lplayer.Character:GetChildren()) do
+		if g:IsA("Tool") then
+			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "BrickColor", BrickColor.New(0,0,255))
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character[g.Name].Handle, "Material", Enum.Material.ForceField)
 			D:FireEvent("PompousTheCloud", game.Players.LocalPlayer.Character.PompousTheCloud.Handle, "Material", Enum.Material.Plastic)
 		end
