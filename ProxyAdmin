@@ -194,13 +194,13 @@ if p then
 [60]wcamo --// Makes your tool white camo
 [61]bcamo --// Makes your tool blue camo
 [62]neon --// Makes your character neon
-[63]pff --// Purple ForceField
+[63]pff --// Pink ForceField
 [64]rff --// Red Forcefield
 [65]gff --// Green Forcefield
 [66]off --// Orange Forcefield
 [67]wff --// White Forcefield
 [68]bff --// Blue Forcefield
-[69]ptff --// Purple Tool Forcefield
+[69]ptff --// Pink Tool Forcefield
 [70]rtff --// Red Tool Forcefield
 [71]gtff --// Green Tool Forcefield
 [72]otff --// Orange Tool Forcefield
@@ -656,7 +656,7 @@ game.Workspace.GiveTool:FireServer(a,"PompousTheCloud")F["Backpack"]:WaitForChil
 for L,n in pairs(G:GetDescendants())do 
 if n:IsA("BasePart")then 
 D:FireEvent("PompousTheCloud",n,"Material",Enum.Material.ForceField)
-D:FireEvent("PompousTheCloud",n,"BrickColor",BrickColor.new("Royal Purple"))
+D:FireEvent("PompousTheCloud",n,"BrickColor",BrickColor.new(20,0,255))
 end 
 end 
 end;
